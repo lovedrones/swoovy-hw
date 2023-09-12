@@ -38,6 +38,7 @@ function App() {
             key: "/",
             icon: <DashboardOutlined />,
           },
+          //Menu items array with icons @antd-icons
           { label: "Matches", key: "/matches", icon: <BlockOutlined /> },
           { label: "Events", key: "/events", icon: <CalendarOutlined /> },
           { label: "Teams", key: "/teams", icon: <TeamOutlined /> },
@@ -51,6 +52,8 @@ function App() {
     </div>
   );
 }
+// Routes to pages from the menu
+//Events Pages only page with mock content
 function Content() {
   return (
     <div>
@@ -68,7 +71,7 @@ function Content() {
   );
 }
 function Events() {
-  // Example Names Array
+  // Mock Data
   const eventsArray = [
     {
       EventName: "Create Covid-19",
@@ -92,8 +95,6 @@ function Events() {
 
   return (
     <div>
-      {/* Example for Juan */}
-      {/* Remember to use .map() if you need to iterate through things and have something append to the DOM */}
       {eventsArray.map((name, index) => {
         const {
           EventName = "",
@@ -104,8 +105,6 @@ function Events() {
 
         return (
           <EventCard
-            // When you iterate things on the DOM in react. You need to give it a unique key.
-            // That way react knows which of the items you're trying to do things too.
             key={`${EventName}-${EventDate}-${index}`}
             EventName={EventName}
             EventDate={EventDate}
