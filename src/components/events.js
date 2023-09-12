@@ -1,41 +1,52 @@
 import { Card } from "antd";
+import {
+  EnvironmentOutlined,
+  HeartOutlined,
+  LoginOutlined,
+} from "@ant-design/icons";
 
 export default function EventCard(props) {
   const {
+    image = "",
     EventName = "",
     EventDate = "",
     EventHost = "",
-    EventAddress = "",
+    location = "",
   } = props;
 
   return (
     <Card
       hoverable={true}
-      style={{ width: 320 }}
+      style={{ width: 250, marginLeft: 100, marginTop: 30 }}
       cover={
         <div
           style={{
-            height: 150,
-            width: "100%",
-            background: "linear-gradient(#e66465, #9198e5)",
+            background: { image },
             color: "white",
             fontSize: 30,
 
             fontFamily: "cursive",
           }}
         >
-          Event Image!
+          {image}
         </div>
       }
     >
-      <Card.Meta title="Event"></Card.Meta>
-      Name: {EventName}
+      <Card.Meta></Card.Meta>
+      <div style={{ color: "#f55a47", fontWeight: "Bold" }}>
+        Date: {EventDate}
+      </div>
+      <div style={{ color: "#0c3f65", fontWeight: "Bold", fontSize: 18 }}>
+        {EventName}
+      </div>
       <br />
-      Date: {EventDate}
+      <LoginOutlined />
+      {EventHost}
       <br />
-      Host: {EventHost}
+      <EnvironmentOutlined /> {location}
       <br />
-      Address: {EventAddress}
+      <br />
+      <HeartOutlined />
     </Card>
   );
 }

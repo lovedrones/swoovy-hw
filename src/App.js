@@ -1,5 +1,5 @@
 import "./App.css";
-import { Menu } from "antd";
+import { Menu, Image } from "antd";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import {
   DashboardOutlined,
@@ -74,22 +74,40 @@ function Events() {
   // Mock Data
   const eventsArray = [
     {
+      image: (
+        <Image
+          width={250}
+          src="https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/2023/05/end-covid.jpg"
+        ></Image>
+      ),
       EventName: "Create Covid-19",
       EventDate: "Thurday, Feb 18, 5:45 PM CT",
       EventHost: "By Mobile Loaves",
-      EventAddress: "11000 N Mopac Expy #100",
+      location: "11000 N Mopac Expy #100",
     },
     {
+      image: (
+        <Image
+          width={250}
+          src="https://images.wsj.net/im-626352/?width=700&height=521"
+        ></Image>
+      ),
       EventName: "Bridges Out of Poverty",
       EventDate: "Friday, Feb 19, 4:45 PM CT",
       EventHost: "By Mobile Loaves",
-      EventAddress: "11000 N Mopac Expy #100",
+      location: "11000 N Mopac Expy #100",
     },
     {
+      image: (
+        <Image
+          width={250}
+          src="https://capital-services.com/wp-content/uploads/2023/06/Health-Happy.jpg"
+        ></Image>
+      ),
       EventName: "Health and Happiness",
       EventDate: "Saturday, Feb 20, 3:45 PM CT",
       EventHost: "By Mobile Loaves",
-      EventAddress: "11000 N Mopac Expy #100",
+      location: "11000 N Mopac Expy #100",
     },
   ];
 
@@ -97,19 +115,21 @@ function Events() {
     <div>
       {eventsArray.map((name, index) => {
         const {
+          image = "",
           EventName = "",
           EventDate = "",
           EventHost = "",
-          EventAddress = "",
+          location = "",
         } = name;
 
         return (
           <EventCard
             key={`${EventName}-${EventDate}-${index}`}
+            image={image}
             EventName={EventName}
             EventDate={EventDate}
             EventHost={EventHost}
-            EventAddress={EventAddress}
+            location={location}
           ></EventCard>
         );
       })}
