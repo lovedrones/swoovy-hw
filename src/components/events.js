@@ -17,15 +17,11 @@ export default function EventCard(props) {
   return (
     <Card
       hoverable={true}
-      style={{ width: 250, marginLeft: 100, marginTop: 30 }}
+      style={{ width: 250, marginLeft: "20%", marginTop: 30 }}
       cover={
         <div
           style={{
             background: { image },
-            color: "white",
-            fontSize: 30,
-
-            fontFamily: "cursive",
           }}
         >
           {image}
@@ -36,7 +32,7 @@ export default function EventCard(props) {
       <div style={{ color: "#f55a47", fontWeight: "Bold" }}>
         Date: {EventDate}
       </div>
-      <div style={{ color: "#0c3f65", fontWeight: "Bold", fontSize: 18 }}>
+      <div style={{ color: "#0c3f65", fontWeight: "Bold", fontSize: 16 }}>
         {EventName}
       </div>
       <br />

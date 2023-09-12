@@ -80,7 +80,7 @@ function Events() {
           src="https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/2023/05/end-covid.jpg"
         ></Image>
       ),
-      EventName: "Create Covid-19",
+      EventName: "Create Covid-19 Packages",
       EventDate: "Thurday, Feb 18, 5:45 PM CT",
       EventHost: "By Mobile Loaves",
       location: "11000 N Mopac Expy #100",
@@ -106,6 +106,18 @@ function Events() {
       ),
       EventName: "Health and Happiness",
       EventDate: "Saturday, Feb 20, 3:45 PM CT",
+      EventHost: "By Mobile Loaves",
+      location: "11000 N Mopac Expy #100",
+    },
+    {
+      image: (
+        <Image
+          width={250}
+          src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2021/11/shutterstock_285980522.jpg"
+        ></Image>
+      ),
+      EventName: "Those who foresaw Climate Change",
+      EventDate: "Sunday, Feb 21, 2:45 PM CT",
       EventHost: "By Mobile Loaves",
       location: "11000 N Mopac Expy #100",
     },
